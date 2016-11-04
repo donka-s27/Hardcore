@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CatalogViewController">
+            <connections>
+                <outlet property="_adBanner" destination="B53-Ko-xC5" id="1Yk-bo-KI0"/>
+                <outlet property="backgroundImageView" destination="15" id="9jp-qD-kUu"/>
+                <outlet property="contentImageView" destination="16" id="17"/>
+                <outlet property="fbButton" destination="bFg-1U-a1h" id="GTz-ON-BOB"/>
+                <outlet property="instagramButton" destination="eAB-36-nBG" id="tjt-gC-O3U"/>
+                <outlet property="productListTableView" destination="4" id="12"/>
+                <outlet property="supportButton" destination="30" id="hLt-BE-O0w"/>
+                <outlet property="toolbar" destination="20" id="27"/>
+                <outlet property="twButton" destination="bd3-2d-jqm" id="Jc9-g7-aa2"/>
+                <outlet property="view" destination="2" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="15" userLabel="Background Image">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4" userLabel="Product LIst">
+                    <rect key="frame" x="10" y="519" width="748" height="463"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="9"/>
+                        <outlet property="delegate" destination="-1" id="10"/>
+                    </connections>
+                </tableView>
+                <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="B53-Ko-xC5">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="66"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="tVx-VG-EH3"/>
+                    </connections>
+                </adBannerView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="16" userLabel="Content Image">
+                    <rect key="frame" x="10" y="76" width="748" height="433"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="20">
+                    <rect key="frame" x="0.0" y="982" width="768" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="DNU-ms-viK"/>
+                        <barButtonItem image="Twitter.png" id="bd3-2d-jqm">
+                            <color key="tintColor" red="0.30431573959361813" green="0.53853160686945079" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="postToTwitter:" destination="-1" id="Bv8-04-qeT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="O5p-wa-Wqe"/>
+                        <barButtonItem title="Item" id="eAB-36-nBG">
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="postToInstagram:" destination="-1" id="DwJ-th-Zl6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="8Ug-UJ-3kl"/>
+                        <barButtonItem image="FB.png" style="plain" id="bFg-1U-a1h">
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="postToFB:" destination="-1" id="spb-eS-jF4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="5Zi-Yk-0Wr"/>
+                        <barButtonItem title="Log In" id="26" userLabel="Log In">
+                            <connections>
+                                <action selector="restorePurchases:" destination="-1" id="28"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="UoA-cd-Wyb"/>
+                        <barButtonItem title="Support" id="30" userLabel="Support">
+                            <connections>
+                                <action selector="emailToKira:" destination="-1" id="8d3-uf-SBf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ZgT-ZO-6sH"/>
+                        <barButtonItem title="Website" id="21" userLabel="Website">
+                            <color key="tintColor" red="0.80000000000000004" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showHomePage:" destination="-1" id="29"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="APf-CD-vni"/>
+                    </items>
+                    <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="0.9660034170332974" green="0.94861108852902565" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="727" y="601"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="FB.png" width="40" height="40"/>
+        <image name="Twitter.png" width="40" height="40"/>
+    </resources>
+</document>
